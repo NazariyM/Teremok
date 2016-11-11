@@ -1,17 +1,19 @@
 $(document).ready(function() {
 
-   // scroll next section
+    // scroll next section
 
-   (function () {
-      var scrollBtn = $('.js-scroll')
-      scrollBtn.on('click', function () {
-   			var scrollDistance = $(this).closest('section').next('section').offset().top;
-   			$("html, body").animate({scrollTop: scrollDistance}, 1000);
-   		});
-   })();
+    (function() {
+        var scrollBtn = $('.js-scroll')
+        scrollBtn.on('click', function() {
+            var scrollDistance = $(this).closest('section').next('section').offset().top;
+            $("html, body").animate({
+                scrollTop: scrollDistance
+            }, 1000);
+        });
+    })();
 
 
-   // area slider
+    // area slider
 
     (function() {
         var sldArea = $('.js-area'),
@@ -27,6 +29,24 @@ $(document).ready(function() {
             }
         });
         sldOutput.val(sldArea.slider("value"));
+    })();
+
+    // questions accordion
+
+    (function() {
+        var allButtons = $('.js-accordion-title'),
+            allPanels = $('.js-accordion-inner');
+
+        allButtons.click(function() {
+            if (!$(this).parent().hasClass('is-active')) {
+                allPanels.slideUp();
+                allButtons.parent().removeClass('is-active');
+                $(this).parent().addClass('is-active').children().last().slideDown();
+                return false;
+            } else {
+                $(this).parent().removeClass('is-active').children().last().slideUp();
+            }
+        });
     })();
 
 });

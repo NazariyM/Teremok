@@ -299,18 +299,21 @@
       &--i
          margin-top: 30px
          +PTSans-BoldItalic
+   &__request
+      margin-top: 15px
 
 .request
-   margin-top: 15px
    &__text
+      margin-bottom: 28px
       line-height: 1.67
       color: #fff
 .request-form
-   margin-top: 28px
-   +clr
+   font-size: 0
    &__style
-      float: left
+      display: inline-block
+      vertical-align: middle
       position: relative
+      margin-right: 29px
       &::before
          position: absolute
          top: calc(50% - 10px)
@@ -330,9 +333,125 @@
          color: #a2a2a2
          font-size: 24px
    &__btn
-      float: right
+      display: inline-block
+      vertical-align: middle
       padding: 17px 66px
       font-size: 20px
+
+// steps section
+.height
+   height: 510px
+.steps
+   padding: 73px 0 62px
+   background-color: #e8e8e8
+   &__row
+      margin-top: 40px
+      font-size: 0
+      +clr
+      &:nth-of-type(2)
+         margin-top: 52px
+   &__item
+      display: inline-block
+      vertical-align: top
+      width: 33.33333%
+      margin-bottom: 57px
+      padding: 0 25px
+   &__request
+      float: left
+      margin-top: 11px
+      .request-form__field
+         padding: 0 100px 0 57px
+      .request-form__style
+         margin-right: 6px
+         &::before
+            left: 15px
+
+   &__item--first
+      float: left
+      width: 32%
+      margin-bottom: 0
+      padding: 0 20px 0 70px
+      font-size: 0
+      .steps__item-number
+         display: inline-block
+         vertical-align: middle
+         position: static
+         margin-right: 19px
+   &__item-title
+      display: inline-block
+      vertical-align: middle
+   &__item-number
+      position: absolute
+      top: 10px
+      left: -5px
+      font-size: 100px
+      color: #ef7f1a
+      line-height: 0.74
+      +GothamPro-Bold
+   &__item-title
+      font-size: 24px
+      +PTSans-Bold
+   &__item-pic
+      position: relative
+      width: 231px
+      margin: 0 auto 20px
+      border-radius: 50%
+      overflow: hidden
+   &__item-text
+      font-size: 18px
+      line-height: 1.33
+      text-align: center
+
+// questions section
+
+.questions
+   padding: 75px 0 60px
+   &__accordion
+      margin-top: 37px
+
+
+// accordion
+.accordion
+   &__title
+      &.is-active .accordion__title-in
+         background-color: #a2b333
+         color: #fff
+      &.is-active .accordion__inner
+         border-bottom-color: #ef7f1a
+      &.is-active .accordion__icon
+         color: #fff
+         transform: translate(0)
+      & + &
+         margin-top: 40px
+   &__title-in
+      position: relative
+      padding: 24px 70px 23px 37px
+      border: 1px solid #a2b333
+      border-left: 10px solid #a2b333
+      cursor: pointer
+      +trs
+   &__inner
+      display: none
+      padding: 25px 35px 25px 39px
+      border: 1px solid #ef7f1a
+      border-left: 10px solid #ef7f1a
+      border-top: none
+      box-shadow: 0 1px 13px rgba(0, 0, 1, 0.25)
+   &__content
+      line-height: 1.44
+      &--color
+         color: #ef7f1a
+   &__icon
+      position: absolute
+      right: 25px
+      top: calc(50% - 12px)
+      color: #a2b333
+      font-size: 24px
+      transform: rotate(180deg)
+      +trs
+
+
+
 
 
 //***=== FOOTER ===***//
