@@ -1,5 +1,16 @@
 $(document).ready(function() {
 
+   // scroll next section
+
+   (function () {
+      var scrollBtn = $('.js-scroll')
+      scrollBtn.on('click', function () {
+   			var scrollDistance = $(this).closest('section').next('section').offset().top;
+   			$("html, body").animate({scrollTop: scrollDistance}, 1000);
+   		});
+   })();
+
+
    // area slider
 
     (function() {

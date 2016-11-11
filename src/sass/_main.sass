@@ -10,9 +10,6 @@
 
 .logo
    width: 211px
-   &__img
-      display: block
-      width: 100%
 
 .nav
    float: left
@@ -48,7 +45,7 @@
 
 .screen
    position: relative
-   background: url(../img/bg/screen_bg.jpg) no-repeat top center
+   background: url(../img/bg/screen_bg.jpg) no-repeat top center/cover
    min-height: 600px
    height: 0
    &__inner
@@ -121,7 +118,6 @@
          padding: 16px 15px 33px 30px
    &__sub-title
       margin-bottom: 20px
-      font-size: 18px
       text-align: left
       +PTSans-Bold
    &__input
@@ -161,7 +157,6 @@
       display: block
       position: relative
       margin-bottom: 13px
-      font-size: 18px
       cursor: pointer
       &::before
          display: inline-block
@@ -173,7 +168,7 @@
          content: ''
       &::after
          position: absolute
-         top: 7px
+         top: 8px
          left: 4px
          +s(checked)
          content: ''
@@ -189,6 +184,7 @@
    height: 10px
    .ui-slider-handle
       top: -14px
+      margin-left: -5px
       cursor: pointer
 .ui-corner-all
    border-radius: 0
@@ -214,8 +210,129 @@
    background-color: transparent
    +GothamPro-Bold
 
+// works section
 
+.works
+   padding: 46px 0 58px
+   &__title--lg
+      font-size: 36px
+   &__inner
+      margin: 65px 0 0
+      font-size: 0
+      text-align: justify
+      &::after
+         display: inline-block
+         width: 100%
+         content: ''
+   &__item
+      display: inline-block
+      vertical-align: top
+      width: 31.623931%
+      margin-bottom: 39px
+      text-align: center
+   &__text
+      margin-top: 20px
+      font-size: 18px
+      text-align: left
+   &__area
+      display: block
+      &--sm
+         font-size: 12px
+         vertical-align: super
+   &__price
+      +PTSans-Bold
+   &__btn
+      display: inline-block
+      margin-top: 23px
+      padding: 14px 35px
 
+// features section
+
+.features
+   padding-top: 88px
+   background: url(../img/bg/features_bg-1.jpg) no-repeat top center/cover
+   &__descr
+      margin-top: 13px
+      font-size: 24px
+      text-align: center
+   &__row
+      max-width: 800px
+      margin: 60px auto 68px
+      font-size: 0
+   &-item
+      display: inline-block
+      vertical-align: top
+      padding: 0 15px
+      width: 33.33333%
+      text-align: center
+   &-item__pic
+      margin: 0 auto 15px
+      &--1
+         +s(features-1)
+         &:hover
+            +s(features-1-hvr)
+      &--2
+         +s(features-2)
+         &:hover
+            +s(features-2-hvr)
+      &--3
+         +s(features-3)
+         &:hover
+            +s(features-3-hvr)
+   &-item__text
+      font-size: 18px
+      line-height: 1.33
+      +PTSans-Bold
+   &__leader
+      padding: 38px 0 80px
+      background: url(../img/bg/features_bg-2.jpg) no-repeat top center/cover
+   &__col
+      max-width: 700px
+      float: right
+   &__leader-text
+      color: #fff
+      line-height: 1.67
+      text-align: left
+   &__leader-descr
+      &--b
+         +PTSans-Bold
+      &--i
+         margin-top: 30px
+         +PTSans-BoldItalic
+
+.request
+   margin-top: 15px
+   &__text
+      line-height: 1.67
+      color: #fff
+.request-form
+   margin-top: 28px
+   +clr
+   &__style
+      float: left
+      position: relative
+      &::before
+         position: absolute
+         top: calc(50% - 10px)
+         left: 30px
+         content: ''
+         +s(phone)
+   &__field
+      width: 100%
+      padding: 0 33px 0 74px
+      height: 60px
+      line-height: 60px
+      background-color: #fff
+      +PTSans-Regular
+      font-size: 24px
+      color: #a2a2a2
+      +placeholder
+         color: #a2a2a2
+         font-size: 24px
+   &__btn
+      float: right
+      padding: 17px 66px
+      font-size: 20px
 
 
 //***=== FOOTER ===***//
