@@ -1,6 +1,222 @@
 //***=== HEADER ===***//
 
+.header
+   padding: 17px 0
+   background-color: #165231
+   &__logo
+      float: left
+   &__call
+      float: right
+
+.logo
+   width: 211px
+   &__img
+      display: block
+      width: 100%
+
+.nav
+   float: left
+   margin: 28px 0 0 53px
+   font-size: 0
+   &__link
+      display: inline-block
+      font-size: 14px
+      color: #fff
+      text-decoration: none
+      text-transform: uppercase
+      +trs
+      &:hover
+         color: #ef7f1a
+      & + &
+         margin-left: 33px
+
+.call
+   &__number
+      display: block
+      font-size: 24px
+      +GothamPro-Bold
+      color: #fff
+      text-decoration: none
+   &__btn
+      display: inline-block
+      margin-top: 3px
+      padding: 9px 23px
+      font-size: 14px
+      letter-spacing: 0.05em
+
 //***=== MAIN ===***//
+
+.screen
+   position: relative
+   background: url(../img/bg/screen_bg.jpg) no-repeat top center
+   min-height: 600px
+   height: 0
+   &__inner
+      height: 100%
+      text-align: center
+      &::before
+         content: ''
+         display: inline-block
+         vertical-align: middle
+         height: 100%
+   &__title
+      display: inline-block
+      vertical-align: middle
+      margin-top: -50px
+      font-size: 45px
+      text-transform: uppercase
+      line-height: 1.33
+      color: #fff
+      text-align: center
+      +GothamPro-Bold
+   &__scroll
+      position: absolute
+      left: 50%
+      bottom: 13%
+      transform: translateX(-50%)
+      font-size: 20px
+      text-transform: uppercase
+      text-decoration: none
+      letter-spacing: 0.025em
+      color: #fff
+      +PTSans-Bold
+      &::after
+         position: absolute
+         left: 44%
+         bottom: -31px
+         content: ''
+         +s(arrow_down)
+         animation: arrow 1.5s ease infinite alternate
+
+@keyframes arrow
+   0%, 100%
+      transform: translateY(0)
+   100%
+      transform: translateY(15px)
+
+// calculate section
+
+.calculate
+   padding: 65px 0 60px
+   background-color: #f1f0f0
+   text-align: center
+   &__row
+      margin: 50px 0 0
+      clear: both
+      +clr
+      &:nth-of-type(2) :first-child.calculate__col
+         width: 51.2820512%
+      &:nth-of-type(2) :last-child.calculate__col
+         width: 42.7350427%
+   &__col
+      &:nth-of-type(1)
+         float: left
+         width: 42.7350427%
+      &:nth-of-type(2)
+         float: right
+         width: 51.2820512%
+      &:nth-of-type(2) :last-child.calculate__inner-col
+         padding-left: 0
+      &:nth-of-type(2) .calculate__inner
+         padding: 16px 15px 33px 30px
+   &__sub-title
+      margin-bottom: 20px
+      font-size: 18px
+      text-align: left
+      +PTSans-Bold
+   &__input
+      display: none
+   &__floor
+      width: 33.333333%
+      float: left
+      font-size: 30px
+      text-align: center
+      cursor: pointer
+      +GothamPro-Bold
+      border-left: 2px solid #bababa
+      background-color: #fff
+      +trs
+      &:first-of-type
+         border-left: none
+      &--sm
+         font-size: 12px
+   &__input:checked + .calculate__floor
+      background-color: #a2b333
+      color: #fff
+   &__input:checked + .calculate__label::after
+      transform: scale(1)
+   &__area
+      margin-top: 32px
+   &__inner
+      padding: 16px 30px 33px
+      border: 1px solid #a2b333
+      +clr
+   &__inner-col
+      float: left
+      width: 50%
+      text-align: left
+      &:last-of-type
+         padding-left: 30px
+   &__label
+      display: block
+      position: relative
+      margin-bottom: 13px
+      font-size: 18px
+      cursor: pointer
+      &::before
+         display: inline-block
+         vertical-align: middle
+         margin-right: 7px
+         height: 20px
+         width: 20px
+         border: 1px solid #d1d1d1
+         content: ''
+      &::after
+         position: absolute
+         top: 7px
+         left: 4px
+         +s(checked)
+         content: ''
+         transform: scale(0)
+         +trs
+   &__btn
+      display: inline-block
+      margin-top: 45px
+
+
+// area slider
+.ui-slider-horizontal
+   height: 10px
+   .ui-slider-handle
+      top: -14px
+      cursor: pointer
+.ui-corner-all
+   border-radius: 0
+.ui-widget.ui-widget-content
+   border: none
+   cursor: pointer
+   .ui-state-default
+      height: 37px
+      width: 9px
+      background-color: #a2b333
+      border-radius: 0
+      border: none
+.ui-slider-range
+   background-color: #a2b333
+
+.ui-widget input
+   position: absolute
+   bottom: -55px
+   width: 80px
+   height: 50px
+   font-size: 30px
+   color: #000
+   background-color: transparent
+   +GothamPro-Bold
+
+
+
+
 
 //***=== FOOTER ===***//
 

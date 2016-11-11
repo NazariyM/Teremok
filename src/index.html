@@ -1,24 +1,115 @@
 <!doctype html>
-<html>
+<html lang="ru">
+
 <head>
 	<meta charset="utf-8">
 	<title>Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="theme-color" content="#fff">
-	<link rel="stylesheet" media="all" href="css/style.css" >
+	<link rel="stylesheet" media="all" href="css/style.css">
 </head>
+
 <body>
 
 	<header class="header">
-		<h1></h1>
-		<p></p>
+		<div class="container">
+			<a class="header__logo logo" href="#0">
+				<img class="logo__img" src="img/logo.png" alt="Русский Терем">
+			</a>
+			<nav class="nav">
+				<a href="" class="nav__link">Калькулятор</a>
+				<a href="" class="nav__link">Портфолио</a>
+				<a href="" class="nav__link">О компании</a>
+				<a href="" class="nav__link">Отзывы</a>
+				<a href="" class="nav__link">Частые вопросы</a>
+				<a href="" class="nav__link">Контакты</a>
+			</nav>
+			<div class="header__call call">
+				<a class="call__number" href="tel:89211111111">8 (921) 111-11-11</a>
+				<a class="call__btn btn" href="#0">Заказать звонок</a>
+			</div>
+		</div>
 	</header>
+	<main class="main">
+		<section class="screen">
+			<div class="screen__inner">
+				<h1 class="screen__title">Построим загородный дом<br> за 1,5 месяца по индивудуальному<br> проекту с гарантией</h1>
+			</div>
+			<a class="screen__scroll" href="#0">Рассчитать стоимость</a>
+		</section>
+		<section class="calculate">
+			<div class="container">
+				<h2 class="calculate__title">Рассчитайте, сколько стоит Ваш будущий дом:</h2>
+				<div class="calculate__row">
+					<div class="calculate__col">
+						<div class="calculate__sub-title">Количество этажей:</div>
+						<input class="calculate__input" id="floor-1" type="radio" name="floor">
+						<label class="calculate__floor" for="floor-1">1</label>
+						<input class="calculate__input" id="floor-2" type="radio" name="floor">
+						<label class="calculate__floor" for="floor-2">1,5 <span class="calculate__floor--sm">мансарда</span></label>
+						<input class="calculate__input" id="floor-3" type="radio" name="floor" checked>
+						<label class="calculate__floor" for="floor-3">2</label>
+					</div>
+					<div class="calculate__col">
+						<div class="calculate__sub-title">Площадь Вашего дома:</div>
+						<div class="calculate__area js-area"><input class="calculate__output js-area-output" type="text" readonly></div>
+					</div>
+				</div>
+				<div class="calculate__row">
+					<div class="calculate__col">
+						<div class="calculate__inner">
+							<div class="calculate__sub-title">Материал</div>
+							<div class="calculate__inner-col">
+								<input class="calculate__input" id="check-1" type="checkbox">
+								<label class="calculate__label" for="check-1">Подскажите мне материал</label>
+								<input class="calculate__input" id="check-2" type="checkbox">
+								<label class="calculate__label" for="check-2">Бревно ручной рубки</label>
+								<input class="calculate__input" id="check-3" type="checkbox">
+								<label class="calculate__label" for="check-3">Брус естественной влажности</label>
+							</div>
+							<div class="calculate__inner-col">
+								<input class="calculate__input" id="check-4" type="checkbox">
+								<label class="calculate__label" for="check-4">Оцилиндрованное бревно</label>
+								<input class="calculate__input" id="check-5" type="checkbox">
+								<label class="calculate__label" for="check-5">Профилированный брус</label>
+								<input class="calculate__input" id="check-6" type="checkbox">
+								<label class="calculate__label" for="check-6">Другое</label>
+							</div>
+						</div>
+					</div>
+					<div class="calculate__col">
+						<div class="calculate__inner">
+							<div class="calculate__sub-title">Отделка</div>
+							<div class="calculate__inner-col">
+								<input class="calculate__input" id="check-7" type="checkbox">
+								<label class="calculate__label" for="check-7">Внутренняя (под ключ)</label>
+								<input class="calculate__input" id="check-8" type="checkbox">
+								<label class="calculate__label" for="check-8">Электрика</label>
+								<input class="calculate__input" id="check-9" type="checkbox">
+								<label class="calculate__label" for="check-9">Окна</label>
+							</div>
+							<div class="calculate__inner-col">
+								<input class="calculate__input" id="check-10" type="checkbox">
+								<label class="calculate__label" for="check-10">Теплый пол</label>
+								<input class="calculate__input" id="check-11" type="checkbox">
+								<label class="calculate__label" for="check-11">Автономная канализация</label>
+								<input class="calculate__input" id="check-12" type="checkbox">
+								<label class="calculate__label" for="check-12">Покраска</label>
+							</div>
+						</div>
+					</div>
+				</div>
+				<a class="calculate__btn btn" href="#0">Рассчитать стоимость</a>
+			</div>
+		</section>
+	</main>
 
 
-<!-- <div class="out">
+	<!-- <div class="out">
 	<i class="icon-sepa"></i>
 </div> -->
-<script src="js/app.js"></script>
+	<script src="js/app.js"></script>
 </body>
+
 </html>
