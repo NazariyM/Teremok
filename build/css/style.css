@@ -1189,7 +1189,7 @@ body { font-size: 18px; line-height: 1.2; font-family: PTSans-Regular, Arial, sa
 .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; *zoom: 1; }
 .container:after { content: " "; display: table; clear: both; }
 
-.btn { padding: 14px 34px; color: #fff; background-color: #ef7f1a; font-size: 16px; outline: none; border-radius: 10px; text-decoration: none; text-transform: uppercase; font-family: PTSans-Bold, Arial, sans-serif; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in; }
+.btn { padding: 14px 34px; color: #fff; background-color: #ef7f1a; font-size: 16px; outline: none; border-radius: 10px; text-decoration: none; text-transform: uppercase; cursor: pointer; font-family: PTSans-Bold, Arial, sans-serif; -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in; }
 .btn:hover { background-color: #ea5b21; }
 .btn:active { background-color: #c75527; }
 
@@ -1249,10 +1249,10 @@ img { display: block; max-width: 100%; }
 .calculate__label::before { display: inline-block; vertical-align: middle; margin-right: 7px; height: 20px; width: 20px; border: 1px solid #d1d1d1; content: ""; }
 .calculate__label::after { position: absolute; top: 8px; left: 4px; background-image: url("../img/icons.png"); width: 13px; height: 11px; background-position: -219px -129px; content: ""; -webkit-transform: scale(0); -ms-transform: scale(0); transform: scale(0); -webkit-transition: 0.3s ease-in; transition: 0.3s ease-in; }
 .calculate__btn { display: inline-block; margin-top: 45px; }
-.calculate__popup { display: none; position: absolute; right: 15px; bottom: 50px; width: 360px; border-radius: 5px; }
-.calculate__popup::after, .calculate__popup::before { position: absolute; width: 0; height: 0; border-style: solid; content: ""; }
-.calculate__popup::after { bottom: -9px; border-color: #fff transparent transparent transparent; border-width: 10px 15px 0 15px; }
-.calculate__popup::before { bottom: -10px; border-color: #ced4d7 transparent transparent transparent; border-width: 10px 15px 0 15px; }
+.calculate__popup { display: none; position: fixed; right: 17%; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); width: 360px; border-radius: 5px; z-index: 200; -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5); box-shadow: 0 0 1px rgba(0, 0, 0, 0.5); }
+.calculate__popup::after, .calculate__popup::before { position: absolute; width: 0; height: 0; border-style: solid; content: ""; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
+.calculate__popup::after { bottom: -9px; border-color: #fff transparent transparent transparent; border-width: 12px 15px 0 15px; }
+.calculate__popup::before { bottom: -11px; border-color: #ced4d7 transparent transparent transparent; border-width: 12px 15px 0 15px; }
 .calculate__popup-inner { padding: 20px 40px 20px; background-color: #fff; border: 1px solid #ced4d7; border-radius: 0 0 5px 5px; *zoom: 1; }
 .calculate__popup-inner:after { content: " "; display: table; clear: both; }
 .calculate__popup-title { padding: 15px 40px 15px; background-color: #a2b333; border-radius: 5px 5px 0 0; color: #fff; text-align: left; }
@@ -1395,7 +1395,7 @@ img { display: block; max-width: 100%; }
 .footer__logo { float: left; margin-top: 8px; }
 .footer__number { float: left; margin: 23px 0 0 60px; font-size: 24px; color: #fff; text-decoration: none; font-family: GothamPro-Bold, Arial, sans-serif; }
 
-.scroll-top { position: relative; float: right; display: block; height: 80px; width: 80px; background-color: rgba(255, 255, 255, 0.25); border-radius: 50%; }
+.scroll-top { position: relative; float: right; display: block; height: 80px; width: 80px; background-color: rgba(255, 255, 255, 0.25); border-radius: 50%; cursor: pointer; }
 .scroll-top:active { background-color: rgba(255, 255, 255, 0.5); }
 .scroll-top__icon { font-size: 39px; color: #fff; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px){

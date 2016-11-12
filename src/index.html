@@ -18,16 +18,16 @@
 				<img class="logo__img" src="img/logo.png" alt="Русский Терем">
 			</a>
 			<nav class="nav">
-				<a href="" class="nav__link">Калькулятор</a>
-				<a href="" class="nav__link">Портфолио</a>
-				<a href="" class="nav__link">О компании</a>
-				<a href="" class="nav__link">Отзывы</a>
-				<a href="" class="nav__link">Частые вопросы</a>
-				<a href="" class="nav__link">Контакты</a>
+				<a href="#calculate" class="nav__link">Калькулятор</a>
+				<a href="#works" class="nav__link">Портфолио</a>
+				<a href="#features" class="nav__link">О компании</a>
+				<a href="#testimonials" class="nav__link">Отзывы</a>
+				<a href="#ask" class="nav__link">Частые вопросы</a>
+				<a href="#contact" class="nav__link">Контакты</a>
 			</nav>
 			<div class="header__call call">
 				<a class="call__number" href="tel:89211111111">8 (921) 111-11-11</a>
-				<a class="call__btn btn" href="#0">Заказать звонок</a>
+				<a class="call__btn btn js-popup-open">Заказать звонок</a>
 			</div>
 		</div>
 	</header>
@@ -38,7 +38,7 @@
 			</div>
 			<a class="screen__scroll js-scroll" href="#0">Рассчитать стоимость</a>
 		</section>
-		<section class="calculate">
+		<section id="calculate" class="calculate">
 			<div class="calculate__container container">
 				<h2 class="calculate__title">Рассчитайте, сколько стоит Ваш будущий дом:</h2>
 				<div class="calculate__row">
@@ -101,26 +101,9 @@
 					</div>
 				</div>
 				<button class="calculate__btn btn js-popup-open" type="button">Рассчитать стоимость</button>
-				<div class="calculate__popup js-popup">
-						<div class="calculate__popup-title">Рассчитать стоимость</div>
-						<div class="calculate__popup-inner">
-						<form class="calculate__popup-form js-calculate-form">
-							<div class="calculate__popup-field">
-								<input class="calculate__popup-input" name="Номер телефона" type="text" placeholder="Номер телефона" required>
-							</div>
-							<button class="calculate__popup-btn btn" type="submit">Отправить</button>
-							<!-- Hidden Required Fields -->
-								<input type="hidden" name="project_name" value="Русский Терем">
-								<input type="hidden" name="admin_email" value="nazarriko@gmail.com">
-								<input type="hidden" name="form_subject" value="Form Subject">
-							<!-- END Hidden Required Fields -->
-						</form>
-					</div>
-					<div class="calculate__popup-close js-popup-close"></div>
-				</div>
 			</div>
 		</section>
-		<section class="works">
+		<section id="works" class="works">
 			<div class="container">
 				<h2 class="works__title">Более <span class="works__title--lg">50</span> работ с индивидуальной планировкой</h2>
 				<div class="works__inner">
@@ -193,7 +176,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="features">
+		<section id="features" class="features">
 			<div class="container">
 				<h2 class="features__title">Мы делаем дома с 2006 года</h2>
 				<p class="features__descr">Это позволяет работать быстро и «без косяков»</p>
@@ -222,18 +205,21 @@
 						</div>
 						<div class="features__request request">
 							<p class="request__text">Оставьте заявку и я сам перезвоню Вам, бесплатно расскажу и проконсультирую, какой дом подойдет именно для Вас</p>
-							<form class="request-form" action="#0">
+							<form class="request-form js-calculate-form">
 								<div class="request-form__style">
-									<input class="request-form__field" type="text" placeholder="Введите номер">
+									<input class="request-form__field" type="text" name="Номер телефона" placeholder="Введите номер" required>
 								</div>
 								<button class="request-form__btn btn" type="submit" name="send request">Оставить заявку</button>
+								<input type="hidden" name="project_name" value="Русский Терем">
+								<input type="hidden" name="admin_email" value="nazarriko@gmail.com">
+								<input type="hidden" name="form_subject" value="Form Subject">
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="testimonials">
+		<section id="testimonials" class="testimonials">
 			<h2 class="testimonials__title">Реальные отзывы от реальных людей</h2>
 			<p class="testimonials__descr">Каждому из них можно написать и задать вопросы</p>
 			<div class="testimonials__inner">
@@ -328,11 +314,14 @@
 						<div class="steps__item-title">Оставьте заявку</div>
 					</div>
 					<div class="steps__request request">
-						<form class="request-form" action="#0">
+						<form class="request-form js-calculate-form">
 							<div class="request-form__style">
-								<input class="request-form__field" type="text" placeholder="Введите номер">
+								<input class="request-form__field" type="text" name="Номер телефона" placeholder="Введите номер" required>
 							</div>
 							<button class="request-form__btn btn" type="submit" name="send request">Оставить заявку</button>
+							<input type="hidden" name="project_name" value="Русский Терем">
+							<input type="hidden" name="admin_email" value="nazarriko@gmail.com">
+							<input type="hidden" name="form_subject" value="Form Subject">
 						</form>
 					</div>
 				</div>
@@ -382,7 +371,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="questions">
+		<section id="ask" class="questions">
 			<div class="container">
 				<h2 class="questions__title">Частые вопросы</h2>
 				<div class="questions__accordion accordion">
@@ -421,16 +410,19 @@
 				<div class="ask__col">
 					<h3 class="ask__title">Остались ещё вопросы?</h3>
 					<p class="ask__descr">Задайте его прямо сейчас!</p>
-					<form class="ask__form" action="#0">
-						<textarea class="ask__question" name="question" placeholder="Ваш вопрос..."></textarea>
+					<form class="ask__form js-calculate-form">
+						<textarea class="ask__question" name="Вопрос" placeholder="Ваш вопрос..." required></textarea>
 						<div class="ask__request request">
 							<div class="request-form">
 								<div class="request-form__style">
-									<input class="request-form__field" type="text" placeholder="Введите номер">
+									<input class="request-form__field" name="Номер телефона" type="text" placeholder="Введите номер" required>
 								</div>
 								<button class="request-form__btn btn" type="submit" name="send request">Отправить</button>
 							</div>
 						</div>
+						<input type="hidden" name="project_name" value="Русский Терем">
+						<input type="hidden" name="admin_email" value="nazarriko@gmail.com">
+						<input type="hidden" name="form_subject" value="Form Subject">
 					</form>
 					<div class="ask__call">
 						<p class="ask__text">Или позвоните, всё подробно расскажем!</p>
@@ -439,7 +431,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="contact">
+		<section id="contact" class="contact">
 			<div class="contact__inner">
 				<h2 class="contact__title">Контакты</h2>
 				<div class="contact__col">
@@ -456,9 +448,26 @@
 				<img class="logo__img" src="img/logo.png" alt="Русский Терем">
 			</a>
 			<a class="footer__number" href="tel:89211111111">8 (921) 111-11-11</a>
-			<a class="scroll-top" href="#top"><i class="scroll-top__icon icon-acc_arrow"></i></a>
+			<a class="scroll-top"><i class="scroll-top__icon icon-acc_arrow"></i></a>
 		</div>
 	</footer>
+	<!-- begin popup -->
+	<div class="calculate__popup js-popup">
+			<div class="calculate__popup-title">Рассчитать стоимость</div>
+			<div class="calculate__popup-inner">
+			<form class="calculate__popup-form js-calculate-form">
+				<div class="calculate__popup-field">
+					<input class="calculate__popup-input" name="Номер телефона" type="text" placeholder="Номер телефона" required>
+				</div>
+				<button class="calculate__popup-btn btn" type="submit">Отправить</button>
+					<input type="hidden" name="project_name" value="Русский Терем">
+					<input type="hidden" name="admin_email" value="nazarriko@gmail.com">
+					<input type="hidden" name="form_subject" value="Form Subject">
+			</form>
+		</div>
+		<div class="calculate__popup-close js-popup-close"></div>
+	</div>
+	<!-- end popup -->
 	<script>
 		function initMap() {
 			var myLatLng = {

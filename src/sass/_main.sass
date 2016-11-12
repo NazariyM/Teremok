@@ -182,25 +182,30 @@
       margin-top: 45px
    &__popup
       display: none
-      position: absolute
-      right: 15px
-      bottom: 50px
+      position: fixed
+      right: 17%
+      top: 50%
+      transform: translateY(-50%)
       width: 360px
       border-radius: 5px
+      z-index: 200
+      box-shadow: 0 0 1px rgba(#000, .5)
       &::after, &::before
          position: absolute
          width: 0
          height: 0
          border-style: solid
          content: ''
+         left: 50%
+         transform: translateX(-50%)
       &::after
          bottom: -9px
          border-color: #fff transparent transparent transparent
-         border-width: 10px 15px 0 15px
+         border-width: 12px 15px 0 15px
       &::before
-         bottom: -10px
+         bottom: -11px
          border-color: #ced4d7 transparent transparent transparent
-         border-width: 10px 15px 0 15px
+         border-width: 12px 15px 0 15px
       &-inner
          padding: 20px 40px 20px
          background-color: #fff
@@ -677,6 +682,7 @@
    width: 80px
    background-color: rgba(#fff, .25)
    border-radius: 50%
+   cursor: pointer
    &:active
       background-color: rgba(#fff, .5)
    &__icon

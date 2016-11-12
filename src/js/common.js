@@ -12,6 +12,26 @@ $(document).ready(function() {
         });
     })();
 
+    // scroll to section
+
+    $('a[href^="#"]').on('click', function (e) {
+    e.preventDefault();
+    var el = $(this).attr('href');
+    $('html, body').animate({scrollTop: $(el).offset().top}, 2000);
+    return false;
+});
+
+// scroll top
+
+(function() {
+    $('.scroll-top').click(function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, "slow");
+        return false;
+    });
+})();
+
     // area slider
 
     (function() {
@@ -38,7 +58,7 @@ $(document).ready(function() {
             popupClose = $('.js-popup-close');
 
         popupOpen.click(function() {
-            $(this).next().fadeToggle(200);
+            popup.fadeToggle(200);
         });
 
         popupClose.click(function() {
@@ -61,6 +81,7 @@ $(document).ready(function() {
             }).done(function() {
                 alert("Спасибо! Мы Вам позвоним!");
                 setTimeout(function() {
+                    th.trigger("reset");
                     $('.js-popup').fadeOut();
                 }, 500);
             });
@@ -102,17 +123,6 @@ $(document).ready(function() {
             nextArrow: '<i class="testimonials__arrow testimonials__arrow--right icon-acc_arrow"></i>'
         });
 
-    })();
-
-    // scroll top
-
-    (function() {
-        $("a[href='#top']").click(function() {
-            $("html, body").animate({
-                scrollTop: 0
-            }, "slow");
-            return false;
-        });
     })();
 
 });
