@@ -39,7 +39,7 @@
 			<a class="screen__scroll js-scroll" href="#0">Рассчитать стоимость</a>
 		</section>
 		<section class="calculate">
-			<div class="container">
+			<div class="calculate__container container">
 				<h2 class="calculate__title">Рассчитайте, сколько стоит Ваш будущий дом:</h2>
 				<div class="calculate__row">
 					<div class="calculate__col">
@@ -100,7 +100,24 @@
 						</div>
 					</div>
 				</div>
-				<a class="calculate__btn btn" href="#0">Рассчитать стоимость</a>
+				<button class="calculate__btn btn js-popup-open" type="button">Рассчитать стоимость</button>
+				<div class="calculate__popup js-popup">
+						<div class="calculate__popup-title">Рассчитать стоимость</div>
+						<div class="calculate__popup-inner">
+						<form class="calculate__popup-form js-calculate-form">
+							<div class="calculate__popup-field">
+								<input class="calculate__popup-input" name="Номер телефона" type="text" placeholder="Номер телефона" required>
+							</div>
+							<button class="calculate__popup-btn btn" type="submit">Отправить</button>
+							<!-- Hidden Required Fields -->
+								<input type="hidden" name="project_name" value="Русский Терем">
+								<input type="hidden" name="admin_email" value="nazarriko@gmail.com">
+								<input type="hidden" name="form_subject" value="Form Subject">
+							<!-- END Hidden Required Fields -->
+						</form>
+					</div>
+					<div class="calculate__popup-close js-popup-close"></div>
+				</div>
 			</div>
 		</section>
 		<section class="works">
@@ -216,12 +233,92 @@
 				</div>
 			</div>
 		</section>
-		<!-- <section class="testimonials">
+		<section class="testimonials">
 			<h2 class="testimonials__title">Реальные отзывы от реальных людей</h2>
 			<p class="testimonials__descr">Каждому из них можно написать и задать вопросы</p>
-		</section> -->
-		<div class="height"></div>
-
+			<div class="testimonials__inner">
+				<div class="testimonials__carousel js-carousel">
+					<div class="testimonials__item">
+						<div class="testimonials__item-left">
+							<div class="testimonials__item-pic">
+								<img class="testimonials__item-img" src="img/content/testimonial-1.jpg" alt="Виктор Таринов">
+							</div>
+							<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+						</div>
+						<div class="testimonials__item-text">
+							<div class="testimonials__item-title">Виктор Таринов</div>
+							<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
+							<p class="testimonials__item-descr">Ребята из Русского терема строили дом другу, ему все понравилось. Он посоветовал мне и они построили дачу, баню. Вся наша семья рада этим постройкам...</p>
+						</div>
+					</div>
+					<div class="testimonials__item">
+						<div class="testimonials__item-left">
+							<div class="testimonials__item-pic">
+								<img class="testimonials__item-img" src="img/content/testimonial-2.jpg" alt="Дмитрий Власов">
+							</div>
+							<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+						</div>
+						<div class="testimonials__item-text">
+							<div class="testimonials__item-title">Дмитрий Власов</div>
+							<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
+							<p class="testimonials__item-descr">Наш загородный дом построен командой из "Русского терема", понравилась организация и качество работ. Сделали все, вплоть до подведения ...</p>
+						</div>
+					</div>
+					<div class="testimonials__item">
+						<div class="testimonials__item-left">
+							<div class="testimonials__item-pic">
+								<img class="testimonials__item-img" src="img/content/testimonial-3.jpg" alt="Руслан Зорин">
+							</div>
+							<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+						</div>
+						<div class="testimonials__item-text">
+							<div class="testimonials__item-title">Руслан Зорин</div>
+							<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
+							<p class="testimonials__item-descr">Заказывал постройку бани, построили настоящую баню-теремок, все отлично. Спасибо, Русский терем!</p>
+						</div>
+					</div>
+					<div class="testimonials__item">
+						<div class="testimonials__item-left">
+							<div class="testimonials__item-pic">
+								<img class="testimonials__item-img" src="img/content/testimonial-1.jpg" alt="Виктор Таринов">
+							</div>
+							<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+						</div>
+						<div class="testimonials__item-text">
+							<div class="testimonials__item-title">Виктор Таринов</div>
+							<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
+							<p class="testimonials__item-descr">Ребята из Русского терема строили дом другу, ему все понравилось. Он посоветовал мне и они построили дачу, баню. Вся наша семья рада этим постройкам...</p>
+						</div>
+					</div>
+					<div class="testimonials__item">
+						<div class="testimonials__item-left">
+							<div class="testimonials__item-pic">
+								<img class="testimonials__item-img" src="img/content/testimonial-2.jpg" alt="Дмитрий Власов">
+							</div>
+							<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+						</div>
+						<div class="testimonials__item-text">
+							<div class="testimonials__item-title">Дмитрий Власов</div>
+							<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
+							<p class="testimonials__item-descr">Наш загородный дом построен командой из "Русского терема", понравилась организация и качество работ. Сделали все, вплоть до подведения ...</p>
+						</div>
+					</div>
+					<div class="testimonials__item">
+						<div class="testimonials__item-left">
+							<div class="testimonials__item-pic">
+								<img class="testimonials__item-img" src="img/content/testimonial-3.jpg" alt="Руслан Зорин">
+							</div>
+							<a class="testimonials__item-btn btn" href="#0">Подробнее</a>
+						</div>
+						<div class="testimonials__item-text">
+							<div class="testimonials__item-title">Руслан Зорин</div>
+							<a class="testimonials__item-link" href="#0">vk.com/dssdvs</a>
+							<p class="testimonials__item-descr">Заказывал постройку бани, построили настоящую баню-теремок, все отлично. Спасибо, Русский терем!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section class="steps">
 			<h2 class="steps__title">Как мы работаем</h2>
 			<div class="container">
@@ -289,42 +386,102 @@
 			<div class="container">
 				<h2 class="questions__title">Частые вопросы</h2>
 				<div class="questions__accordion accordion">
-				  <!-- begin accordion item-->
-				  <div class="accordion__title">
-					 <div class="accordion__title-in js-accordion-title">Какой материал выбрать для строительства дома? Лучше дом из бревна или бруса?<i class="accordion__icon icon-acc_arrow"></i></div>
-					 <div class="accordion__inner js-accordion-inner">
-						<p class="accordion__content">Нет однозначного ответа, если сравнивать по стоимости «коробка» из бруса будет стоить дешевле, чем из бревна.но брус потребует больших вложений на отделку. Но дом из бревна крепче, чем дом из бруса. В бревне сохранена вся структура дерева, оставлен верхний самый крепкий слой дерева,а брус выпиливается из разных частей бревна, что приводит к трещинам и изгибам такого материала.</p>
-					 </div>
-				  </div>
-				  <!-- begin accordion item-->
-				  <div class="accordion__title">
-					 <div class="accordion__title-in js-accordion-title">Сколько времени занимает строительство?<i class="accordion__icon icon-acc_arrow"></i></div>
-					 <div class="accordion__inner doc js-accordion-inner">
-						<p class="accordion__content">Всё зависит от объемов. Например, небольшую баньку можно можно сделать «под усадку»<span class="accordion__content--color">*</span> за 2 - 3 недели.  Дом для постоянного проживания от месяца и более.</p>
-						<p class="accordion__content"><span class="accordion__content--color">*</span>«Усадка» -  это свойство строительного материала, в процессе сушки дерево изменяет свой объем.  Не делайте окна и двери, пока не завершилась усадка дома.</p>
-					 </div>
-				  </div>
-				  <!-- begin accordion item-->
-				  <div class="accordion__title">
-					 <div class="accordion__title-in js-accordion-title">В какое время года нужно ставить сруб?<i class="accordion__icon icon-acc_arrow"></i></div>
-					 <div class="accordion__inner doc js-accordion-inner">
-						<p class="accordion__content">Фундамент под струб возводиться в тёплое время года. Работы по возведению сруба выполняются зимой, т.к. древесина имеет наименьший процент влажности. С наступлением весеннего тепла естественным путём  сруб адаптируется к природным условиям, даёт определённую деформацию, брёвна плотно прилегают друг к другу.</p>
-					 </div>
-				  </div>
-				  <!-- begin accordion item-->
-				  <div class="accordion__title">
-					 <div class="accordion__title-in js-accordion-title">Материалы входят в стоимость работы?<i class="accordion__icon icon-acc_arrow"></i></div>
-					 <div class="accordion__inner doc js-accordion-inner">
-						<p class="accordion__content">Это зависит от потребностей заказчика. Работаем как с материалом клиента, так и со своим.</p>
-					 </div>
-				  </div>
+					<div class="accordion__title">
+						<div class="accordion__title-in js-accordion-title">Какой материал выбрать для строительства дома? Лучше дом из бревна или бруса?<i class="accordion__icon icon-acc_arrow"></i></div>
+						<div class="accordion__inner js-accordion-inner">
+							<p class="accordion__content">Нет однозначного ответа, если сравнивать по стоимости «коробка» из бруса будет стоить дешевле, чем из бревна.но брус потребует больших вложений на отделку. Но дом из бревна крепче, чем дом из бруса. В бревне сохранена вся структура дерева, оставлен
+								верхний самый крепкий слой дерева,а брус выпиливается из разных частей бревна, что приводит к трещинам и изгибам такого материала.</p>
+						</div>
+					</div>
+					<div class="accordion__title">
+						<div class="accordion__title-in js-accordion-title">Сколько времени занимает строительство?<i class="accordion__icon icon-acc_arrow"></i></div>
+						<div class="accordion__inner doc js-accordion-inner">
+							<p class="accordion__content">Всё зависит от объемов. Например, небольшую баньку можно можно сделать «под усадку»<span class="accordion__content--color">*</span> за 2 - 3 недели. Дом для постоянного проживания от месяца и более.</p>
+							<p class="accordion__content"><span class="accordion__content--color">*</span>«Усадка» - это свойство строительного материала, в процессе сушки дерево изменяет свой объем. Не делайте окна и двери, пока не завершилась усадка дома.</p>
+						</div>
+					</div>
+					<div class="accordion__title">
+						<div class="accordion__title-in js-accordion-title">В какое время года нужно ставить сруб?<i class="accordion__icon icon-acc_arrow"></i></div>
+						<div class="accordion__inner doc js-accordion-inner">
+							<p class="accordion__content">Фундамент под струб возводиться в тёплое время года. Работы по возведению сруба выполняются зимой, т.к. древесина имеет наименьший процент влажности. С наступлением весеннего тепла естественным путём сруб адаптируется к природным условиям, даёт
+								определённую деформацию, брёвна плотно прилегают друг к другу.</p>
+						</div>
+					</div>
+					<div class="accordion__title">
+						<div class="accordion__title-in js-accordion-title">Материалы входят в стоимость работы?<i class="accordion__icon icon-acc_arrow"></i></div>
+						<div class="accordion__inner doc js-accordion-inner">
+							<p class="accordion__content">Это зависит от потребностей заказчика. Работаем как с материалом клиента, так и со своим.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
+		<section class="ask">
+			<div class="container">
+				<div class="ask__col">
+					<h3 class="ask__title">Остались ещё вопросы?</h3>
+					<p class="ask__descr">Задайте его прямо сейчас!</p>
+					<form class="ask__form" action="#0">
+						<textarea class="ask__question" name="question" placeholder="Ваш вопрос..."></textarea>
+						<div class="ask__request request">
+							<div class="request-form">
+								<div class="request-form__style">
+									<input class="request-form__field" type="text" placeholder="Введите номер">
+								</div>
+								<button class="request-form__btn btn" type="submit" name="send request">Отправить</button>
+							</div>
+						</div>
+					</form>
+					<div class="ask__call">
+						<p class="ask__text">Или позвоните, всё подробно расскажем!</p>
+						<a class="ask__number" href="tel:89211111111">8 (921) 111-11-11</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="contact">
+			<div class="contact__inner">
+				<h2 class="contact__title">Контакты</h2>
+				<div class="contact__col">
+					<p class="contact__address">Адрес: Вологодская область, Вологодский район, п. Харачево</p>
+					<a class="contact__number" href="tel:89211111111">8 (921) 111-11-11</a>
+				</div>
+			</div>
+			<div id="map" class="contact__map"></div>
+		</section>
 	</main>
-
-
-
+	<footer class="footer">
+		<div class="container">
+			<a class="footer__logo logo" href="#0">
+				<img class="logo__img" src="img/logo.png" alt="Русский Терем">
+			</a>
+			<a class="footer__number" href="tel:89211111111">8 (921) 111-11-11</a>
+			<a class="scroll-top" href="#top"><i class="scroll-top__icon icon-acc_arrow"></i></a>
+		</div>
+	</footer>
+	<script>
+		function initMap() {
+			var myLatLng = {
+				lat: 34.0627069,
+				lng: -118.3539114
+			};
+			var mapProp = {
+				center: myLatLng,
+				zoom: 17,
+				scrollwheel: false,
+				draggable: true,
+				mapTypeId: google.maps.MapTypeId.TERRAIN
+			};
+			var map = new google.maps.Map(document.getElementById("map"), mapProp);
+			var marker = new google.maps.Marker({
+				position: myLatLng,
+				map: map,
+				title: 'bluTonic, Inc.'
+			});
+		}
+		google.maps.event.addDomListener(window, 'load', initMap);
+	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
 	<script src="js/app.js"></script>
 </body>
 
